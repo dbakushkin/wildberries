@@ -60,9 +60,9 @@ links.forEach((link) => {
    if(localStorage.getItem("goods") && window.location.pathname === "/goods.html") {
        renderGoods(JSON.parse(localStorage.getItem("goods")))
    }
-   if (window.location.pathname !== '/goods.html') {
+   if (allBtn) {
     allBtn.addEventListener('click', () => {
-        getData('ALL', undefined)
+        getData()
     })
 }
 }
